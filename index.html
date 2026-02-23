@@ -1,498 +1,336 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mutia Rizkianti · CV Digital</title>
-    <!-- Fonts & Icons -->
+    <title>Mutia Rizkianti, S.Kom</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* style.css — reset & base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #f4f7fc;
-            color: #1e293b;
-            line-height: 1.5;
-            scroll-behavior: smooth;
-            padding: 2rem 1.5rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(255,255,255,0.75);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border-radius: 2.5rem;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.2);
-            padding: 2.5rem 2rem;
-            border: 1px solid rgba(255,255,255,0.5);
-            transition: all 0.3s ease;
-        }
-
-        /* animasi fade-in */
-        .fade-section {
-            opacity: 0;
-            transform: translateY(25px);
-            transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.3, 1), transform 0.8s ease;
-        }
-
-        .fade-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* header / hero */
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 2.5rem;
-            gap: 2rem;
-        }
-
-        .hero-name h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            background: linear-gradient(145deg, #0f2b4b, #2a5f7a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-        }
-
-        .hero-name .badge {
-            background: #e6f0ff;
-            color: #1e4a6b;
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 0.4rem 1.2rem;
-            border-radius: 40px;
-            display: inline-block;
-            margin-top: 0.75rem;
-            border: 1px solid rgba(33, 114, 229, 0.2);
-            backdrop-filter: blur(4px);
-        }
-
-        .hero-quote {
-            background: #ffffffcc;
-            backdrop-filter: blur(8px);
-            padding: 1.2rem 2rem;
-            border-radius: 60px;
-            box-shadow: 0 8px 20px -6px rgba(0,55,100,0.15);
-            border: 1px solid rgba(255,255,255,0.7);
-            font-weight: 500;
-        }
-
-        .hero-quote i {
-            color: #2c6c9e;
-            margin-right: 8px;
-        }
-
-        /* section headings */
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1.8rem;
-            font-weight: 650;
-            margin: 2.5rem 0 1.5rem 0;
-            letter-spacing: -0.01em;
-            border-bottom: 3px solid rgba(31, 99, 162, 0.2);
-            padding-bottom: 0.5rem;
-        }
-
-        .section-title i {
-            background: #1e3b5c;
-            color: white;
-            padding: 10px;
-            border-radius: 20px;
-            font-size: 1.2rem;
-            width: 48px;
-            height: 48px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 12px 18px -8px rgba(0,79,158,0.3);
-        }
-
-        /* card grid */
-        .grid-2, .grid-3 {
-            display: grid;
-            gap: 1.8rem;
-        }
-
-        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-
-        .card {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.7);
-            border-radius: 32px;
-            padding: 1.8rem 1.5rem;
-            box-shadow: 0 18px 36px -12px rgba(0, 45, 80, 0.15);
-            transition: all 0.3s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 50px -18px #1e4f76;
-            border-color: #b5d8ff;
-        }
-
-        .card h3 {
-            font-size: 1.5rem;
-            font-weight: 650;
-            color: #0f2f4a;
-            margin-bottom: 0.5rem;
-        }
-
-        .card .sub {
-            font-size: 0.95rem;
-            color: #3d6180;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 1rem;
-        }
-
-        .card .sub i {
-            font-size: 1rem;
-            color: #2970a5;
-        }
-
-        .card ul, .card p {
-            color: #1d3a54;
-            font-weight: 400;
-            list-style: none;
-        }
-
-        .card li {
-            margin-bottom: 0.7rem;
-            display: flex;
-            gap: 0.8rem;
-            align-items: flex-start;
-        }
-
-        .card li i {
-            color: #1f6eaf;
-            font-size: 0.9rem;
-            margin-top: 0.2rem;
-            min-width: 1.2rem;
-        }
-
-        .tag-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-            margin: 1.2rem 0 0.2rem;
-        }
-
-        .tag {
-            background: #e3efff;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #124072;
-            border: 1px solid #c7dfff;
-        }
-
-        .project-link {
-            margin-top: 1.2rem;
-            font-weight: 500;
-        }
-
-        .project-link a {
-            text-decoration: none;
-            color: #1565a7;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            border-bottom: 2px dotted #9ac4e4;
-        }
-
-        /* certificate & skills special */
-        .compact-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.9rem;
-        }
-
-        .skill-badge {
-            background: #d9ecff;
-            border-radius: 40px;
-            padding: 0.5rem 1.2rem;
-            font-weight: 500;
-            color: #103c62;
-            transition: 0.1s;
-            border: 1px solid white;
-        }
-
-        .skill-badge:hover {
-            background: #c0e0ff;
-            transform: scale(1.02);
-        }
-
-        hr {
-            border: none;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #a0c8f0, transparent);
-            margin: 2rem 0 0.5rem;
-        }
-
-        footer {
-            margin-top: 2.5rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #3d607b;
-        }
-
-        /* responsive */
-        @media (max-width: 650px) {
-            .hero { flex-direction: column; align-items: start; }
-            .hero-name h1 { font-size: 2.5rem; }
-            .container { padding: 1.5rem; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container" id="mainContainer">
-    <!-- HERO / TENTANG SAYA -->
-    <div class="hero fade-section" id="about">
-        <div class="hero-name">
-            <h1>Mutia Rizkianti</h1>
-            <div class="badge"><i class="fas fa-star" style="margin-right: 6px;"></i>IPK 3.79 · Ilmu Komputer</div>
-        </div>
-        <div class="hero-quote">
-            <i class="fas fa-quote-left"></i> Lulusan Ilmu Komputer dengan dasar programming, desain, dan manajemen administrasi yang sistematis.
-        </div>
+    <!-- Particle Background -->
+    <canvas id="techCanvas"></canvas>
+    
+    <!-- 3D Floating Elements -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
     </div>
 
-    <!-- TENTANG SAYA (deskripsi) -->
-    <div class="fade-section" style="margin-bottom: 1rem;">
-        <div class="card" style="background: #ecf5fdcc; border-radius: 2rem; padding: 1.8rem;">
-            <p style="font-size: 1.2rem; font-weight: 400; display: flex; gap: 1rem; align-items: center;">
-                <i class="fas fa-bullseye" style="color: #1c5890; font-size: 2rem;"></i> 
-                <span>Memiliki fokus kuat pada manajemen administrasi, terbiasa mengelola dokumen, alur kerja, serta koordinasi tim secara sistematis dan efisien. Adaptif serta mampu mengintegrasikan kemampuan teknis dengan pengelolaan operasional terstruktur.</span>
-            </p>
-        </div>
-    </div>
-
-    <!-- RIWAYAT PENDIDIKAN -->
-    <div class="section-title fade-section">
-        <i class="fas fa-graduation-cap"></i> 
-        <span>Pendidikan</span>
-    </div>
-    <div class="grid-2 fade-section">
-        <div class="card">
-            <h3>Universitas Riau</h3>
-            <div class="sub"><i class="far fa-calendar-alt"></i> Sep 2022 - Dec 2025</div>
-            <p><strong>Computer Science</strong> · IPK 3.79</p>
-            <p class="tag-group"><span class="tag">S1 Ilmu Komputer</span><span class="tag">Pengembangan web</span></p>
-        </div>
-        <div class="card">
-            <h3>Sertifikat Unggulan</h3>
-            <ul class="compact-list" style="margin-top: 0.5rem;">
-                <li><i class="fas fa-certificate"></i> Oracle Cloud Infrastructure Foundation — Oracle Academy (Jan 2024)</li>
-                <li><i class="fas fa-certificate"></i> Java Fundamental & Programming — Talent Scout Academy (Sep 2023)</li>
-                <li><i class="fas fa-certificate"></i> Database Foundation — Oracle Cloud Academy (Jun 2023)</li>
-                <li><i class="fas fa-certificate"></i> Administrasi Perkantoran — Dsarea (2026)</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- PENGALAMAN KERJA -->
-    <div class="section-title fade-section">
-        <i class="fas fa-briefcase"></i>
-        <span>Pengalaman Kerja</span>
-    </div>
-    <div class="grid-2 fade-section">
-        <!-- Omera Pustaka / Swanshine -->
-        <div class="card">
-            <h3>Freelance Layouter</h3>
-            <div class="sub"><i class="far fa-calendar-alt"></i> Nov 2023 - Dec 2025 · Omera Pustaka / Swanshine Project</div>
-            <ul>
-                <li><i class="fas fa-chevron-right"></i> Layout buku dari naskah hingga siap cetak, revisi & final checking.</li>
-                <li><i class="fas fa-chevron-right"></i> Mengelola beberapa proyek dengan menjaga kualitas dan deadline.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Graphic Designer & Social Media Specialist</h3>
-            <div class="sub"><i class="far fa-calendar-alt"></i> Nov 2022 - Jan 2023 · Swanshine Project</div>
-            <ul>
-                <li><i class="fas fa-chevron-right"></i> Desain materi publikasi, kelola konten sesuai identitas brand.</li>
-                <li><i class="fas fa-chevron-right"></i> Produksi visual, penulisan caption, evaluasi performa konten.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Web Developer Intern & Event Support</h3>
-            <div class="sub"><i class="far fa-calendar-alt"></i> Jan 2025 - Feb 2025 · Riau Pos</div>
-            <ul>
-                <li><i class="fas fa-chevron-right"></i> Mengembangkan dan memelihara website event beserta database peserta.</li>
-                <li><i class="fas fa-chevron-right"></i> Optimasi, troubleshooting, dukungan teknis selama event.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Administrator Penerbitan</h3>
-            <div class="sub"><i class="far fa-calendar-alt"></i> May 2021 - Dec 2021 · Penerbit Arena Kata</div>
-            <ul>
-                <li><i class="fas fa-chevron-right"></i> Administrasi naskah, dokumen penerbitan, pengajuan ISBN.</li>
-                <li><i class="fas fa-chevron-right"></i> Koordinasi proses terbit secara terstruktur dan tepat waktu.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- PROYEK AKADEMIK & PROFESIONAL -->
-    <div class="section-title fade-section">
-        <i class="fas fa-laptop-code"></i>
-        <span>Proyek Akademik & Profesional</span>
-    </div>
-    <div class="grid-2 fade-section">
-        <div class="card">
-            <h3>Programmer Website Digital Innovation Hub</h3>
-            <div class="sub"><i class="far fa-calendar-alt"></i> Jun 2025 - Dec 2025 · Penelitian BPP</div>
-            <ul>
-                <li><i class="fas fa-database"></i> Perancangan database, implementasi fitur, integrasi sistem.</li>
-                <li><i class="fas fa-flask"></i> Pengujian untuk mendukung penelitian dan mitra secara optimal.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Programmer Website Honda HSBL Riau Pos</h3>
-            <div class="sub"><i class="far fa-calendar-alt"></i> Jan 2025 - Feb 2025 · Magang Riau Pos</div>
-            <ul>
-                <li><i class="fab fa-laravel"></i> Develop dengan Laravel, HTML, CSS, JS, database.</li>
-                <li><i class="fas fa-bug"></i> Pengujian, bug fixing, optimasi performa.</li>
-            </ul>
-            <div class="project-link">
-                <a href="https://riauposhsbl.com/" target="_blank"><i class="fas fa-external-link-alt"></i> riauposhsbl.com</a>
+    <div class="container">
+        <!-- ===== HERO SECTION - FOTO DI SEBELAH NAMA ===== -->
+        <header class="hero fade-section">
+            <!-- Bagian Kiri: Nama dan Konten -->
+            <div class="hero-content">
+                <div class="badge-container">
+                    <span class="badge tech"><i class="fas fa-code"></i> Programming</span>
+                    <span class="badge admin"><i class="fas fa-folder-open"></i> Administrasi</span>
+                    <span class="badge sosmed"><i class="fas fa-paint-brush"></i> Desain</span>
+                    <span class="badge creative"><i class="fas fa-lightbulb"></i> Kreatif</span>
+                </div>
+                
+                <!-- Nama dan Foto Berdampingan -->
+                <div class="name-with-photo">
+                    <h1 class="glitch-text" data-text="Mutia Rizkianti S.Kom">Mutia Rizkianti <span class="skom">S.Kom</span></h1>
+                    
+                    <!-- Foto Frame (dipindah ke sebelah nama) -->
+                    <div class="photo-frame-inline">
+                        <div class="rotating-photos-inline" id="rotatingPhotosInline">
+                            <!-- 5 foto akan diisi JS -->
+                        </div>
+                        <div class="photo-overlay-inline"></div>
+                        <div class="photo-glowing-inline"></div>
+                        <div class="photo-indicators-inline">
+                            <span class="indicator-inline active"></span>
+                            <span class="indicator-inline"></span>
+                            <span class="indicator-inline"></span>
+                            <span class="indicator-inline"></span>
+                            <span class="indicator-inline"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cumlaude-badge">
+                    <i class="fas fa-star"></i> CUM LAUDE · IPK 3.79 <i class="fas fa-star"></i>
+                </div>
+                
+                <p class="hero-subtitle">Universitas Riau · Computer Science</p>
+                
+                <p class="hero-desc">
+                    <i class="fas fa-quote-left"></i> Lulusan Ilmu Komputer dengan dasar dan pengalaman dalam programming serta desain, khususnya pengembangan website dan pengelolaan database. Memiliki fokus kuat pada manajemen administrasi, terbiasa mengelola dokumen, alur kerja, serta koordinasi tim secara sistematis dan efisien. Adaptif terhadap dinamika pekerjaan, didukung banyak ide kreatif, serta mampu mengintegrasikan kemampuan teknis dengan pengelolaan operasional yang terstruktur.
+                </p>
+                
+                <!-- Quotes BJ Habibie -->
+                <div class="quote-card">
+                    <i class="fas fa-quote-right quote-icon"></i>
+                    <p>"Keberhasilan bukanlah milik orang yang pintar. Keberhasilan adalah kepunyaan mereka yang senantiasa berusaha."</p>
+                    <span class="quote-author">— B.J. Habibie</span>
+                </div>
             </div>
-        </div>
-    </div>
+        </header>
 
-    <!-- KETERAMPILAN + PERANGKAT KERJA -->
-    <div class="section-title fade-section">
-        <i class="fas fa-cogs"></i>
-        <span>Kompetensi & Perangkat</span>
-    </div>
-    <div class="grid-3 fade-section">
-        <!-- Teknis -->
-        <div class="card">
-            <h4><i class="fas fa-code" style="margin-right: 8px;"></i> Keterampilan Teknis</h4>
-            <div class="tag-group" style="margin-top: 0.8rem;">
-                <span class="skill-badge">Pengembangan web</span>
-                <span class="skill-badge">Pengelolaan database</span>
-                <span class="skill-badge">Layout dokumen</span>
-                <span class="skill-badge">Desain grafis</span>
-                <span class="skill-badge">Administrasi data</span>
-                <span class="skill-badge">Dukungan teknis proyek</span>
+        <!-- ===== ILLUSTRATED ABOUT SECTION ===== -->
+        <section class="about-section fade-section">
+            <div class="about-illustration">
+                <div class="illustration-grid">
+                    <div class="illustration-item code"><i class="fas fa-laptop-code"></i><span>Programming</span></div>
+                    <div class="illustration-item design"><i class="fas fa-paint-brush"></i><span>Desain</span></div>
+                    <div class="illustration-item database"><i class="fas fa-database"></i><span>Database</span></div>
+                    <div class="illustration-item admin"><i class="fas fa-folder-open"></i><span>Administrasi</span></div>
+                    <div class="illustration-item creative"><i class="fas fa-lightbulb"></i><span>Ide Kreatif</span></div>
+                    <div class="illustration-item team"><i class="fas fa-users"></i><span>Koordinasi</span></div>
+                </div>
             </div>
-        </div>
-        <!-- Personal -->
-        <div class="card">
-            <h4><i class="fas fa-heart" style="margin-right: 8px;"></i> Keterampilan Personal</h4>
-            <div class="tag-group">
-                <span class="skill-badge">Ketelitian</span>
-                <span class="skill-badge">Komunikasi</span>
-                <span class="skill-badge">Koordinasi</span>
-                <span class="skill-badge">Manajemen waktu</span>
-                <span class="skill-badge">Pemecahan masalah</span>
-                <span class="skill-badge">Adaptasi</span>
+            <div class="about-content glass-card">
+                <h2><i class="fas fa-user-graduate"></i> Tentang Saya</h2>
+                <p>Lulusan Ilmu Komputer dengan dasar dan pengalaman dalam programming serta desain, khususnya pengembangan website dan pengelolaan database. Memiliki fokus kuat pada manajemen administrasi, terbiasa mengelola dokumen, alur kerja, serta koordinasi tim secara sistematis dan efisien. Adaptif terhadap dinamika pekerjaan, didukung banyak ide kreatif, serta mampu mengintegrasikan kemampuan teknis dengan pengelolaan operasional yang terstruktur.</p>
             </div>
-        </div>
-        <!-- Perangkat Kerja -->
-        <div class="card">
-            <h4><i class="fas fa-tools"></i> Perangkat Kerja</h4>
-            <div class="tag-group">
-                <span class="skill-badge">Laravel</span>
-                <span class="skill-badge">HTML/CSS/JS</span>
-                <span class="skill-badge">Microsoft Office</span>
-                <span class="skill-badge">Tools desain grafis</span>
-                <span class="skill-badge">Database tools</span>
-                <span class="skill-badge">Sistem manajemen proyek</span>
+        </section>
+
+        <!-- ===== PENDIDIKAN DENGAN TIMELINE ===== -->
+        <section class="fade-section">
+            <div class="section-title">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Riwayat Pendidikan</h2>
             </div>
-        </div>
+            <div class="timeline">
+                <div class="timeline-item glass-card">
+                    <div class="timeline-icon"><i class="fas fa-university"></i></div>
+                    <div class="timeline-content">
+                        <h3>Universitas Riau</h3>
+                        <p class="timeline-date"><i class="far fa-calendar"></i> Sep 2022 - Dec 2025</p>
+                        <p class="timeline-desc"><strong>Computer Science</strong> · IPK 3.79 · Cum Laude</p>
+                        <div class="achievement-badge">
+                            <span><i class="fas fa-star"></i> Dengan Pujian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PENGALAMAN KERJA DENGAN FLIP CARDS ===== -->
+        <section class="fade-section">
+            <div class="section-title">
+                <i class="fas fa-briefcase"></i>
+                <h2>Pengalaman Kerja</h2>
+            </div>
+            <div class="experience-grid">
+                <!-- Freelance Layouter -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" data-category="desain">
+                            <div class="exp-icon-big"><i class="fas fa-book-open"></i></div>
+                            <h3>Freelance Layouter</h3>
+                            <p>Omera Pustaka · Swanshine Project</p>
+                            <p class="exp-date">Nov 2023 - Dec 2025</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Layout buku dari naskah hingga siap cetak</li>
+                                <li><i class="fas fa-check-circle"></i> Revisi dan final checking</li>
+                                <li><i class="fas fa-check-circle"></i> Mengelola multi-proyek dengan deadline ketat</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graphic Designer -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" data-category="sosmed">
+                            <div class="exp-icon-big"><i class="fas fa-paint-brush"></i></div>
+                            <h3>Graphic Designer & Social Media Specialist</h3>
+                            <p>Swanshine Project</p>
+                            <p class="exp-date">Nov 2022 - Jan 2023</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Desain materi publikasi</li>
+                                <li><i class="fas fa-check-circle"></i> Kelola konten media sosial</li>
+                                <li><i class="fas fa-check-circle"></i> Produksi visual & evaluasi performa</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Developer Intern -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" data-category="tech">
+                            <div class="exp-icon-big"><i class="fas fa-laptop-code"></i></div>
+                            <h3>Web Developer Intern & Event Support</h3>
+                            <p>Riau Pos</p>
+                            <p class="exp-date">Jan 2025 - Feb 2025</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Pengembangan website event</li>
+                                <li><i class="fas fa-check-circle"></i> Manajemen database peserta</li>
+                                <li><i class="fas fa-check-circle"></i> Optimasi & troubleshooting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Administrator Penerbitan -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" data-category="admin">
+                            <div class="exp-icon-big"><i class="fas fa-file-signature"></i></div>
+                            <h3>Administrator Penerbitan</h3>
+                            <p>Penerbit Arena Kata</p>
+                            <p class="exp-date">May 2021 - Dec 2021</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Administrasi naskah & dokumen</li>
+                                <li><i class="fas fa-check-circle"></i> Pengajuan ISBN</li>
+                                <li><i class="fas fa-check-circle"></i> Koordinasi proses terbit</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROYEK DENGAN HOVER EFFECT ===== -->
+        <section class="fade-section">
+            <div class="section-title">
+                <i class="fas fa-flask"></i>
+                <h2>Proyek Unggulan</h2>
+            </div>
+            <div class="projects-showcase">
+                <!-- Digital Innovation Hub -->
+                <div class="showcase-item glass-card">
+                    <div class="showcase-icon"><i class="fas fa-cube"></i></div>
+                    <h3>Programmer Website Digital Innovation Hub</h3>
+                    <p class="showcase-meta"><i class="far fa-calendar"></i> Jun 2025 - Dec 2025 · BPP</p>
+                    <p class="showcase-desc">Anggota tim peneliti dalam pengembangan website DIH. Bertanggung jawab atas perancangan database, implementasi fitur, integrasi sistem, serta pengujian.</p>
+                </div>
+                
+                <!-- Honda HSBL -->
+                <div class="showcase-item glass-card featured">
+                    <div class="showcase-icon"><i class="fab fa-laravel"></i></div>
+                    <h3>Programmer Website Honda HSBL Riau Pos</h3>
+                    <p class="showcase-meta"><i class="far fa-calendar"></i> Jan 2025 - Feb 2025 · Magang</p>
+                    <p class="showcase-desc">Merancang, mengembangkan, dan memelihara website Honda HSBL Riau menggunakan Laravel. Mengelola fitur HTML, CSS, JavaScript, dan database.</p>
+                    <a href="https://riauposhsbl.com/" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SERTIFIKAT DENGAN CARD BERJALAN ===== -->
+        <section class="fade-section">
+            <div class="section-title">
+                <i class="fas fa-certificate"></i>
+                <h2>Sertifikat Kompetensi</h2>
+            </div>
+            <div class="certificates-carousel">
+                <div class="cert-card glass-card">
+                    <i class="fab fa-oracle"></i>
+                    <h4>Oracle Cloud Infrastructure Foundation</h4>
+                    <p>Oracle Academy · Jan 2024</p>
+                </div>
+                <div class="cert-card glass-card">
+                    <i class="fab fa-java"></i>
+                    <h4>Java Fundamental & Programming</h4>
+                    <p>Talent Scout Academy · Sep 2023</p>
+                </div>
+                <div class="cert-card glass-card">
+                    <i class="fas fa-database"></i>
+                    <h4>Database Foundation</h4>
+                    <p>Oracle Cloud Academy · Jun 2023</p>
+                </div>
+                <div class="cert-card glass-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h4>Administrasi Perkantoran</h4>
+                    <p>Dsarea · 2026</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== KETERAMPILAN DENGAN PROGRESS BAR ===== -->
+        <section class="fade-section">
+            <div class="section-title">
+                <i class="fas fa-chart-pie"></i>
+                <h2>Keterampilan & Kompetensi</h2>
+            </div>
+            <div class="skills-detailed">
+                <!-- Teknis -->
+                <div class="skill-group glass-card">
+                    <h3><i class="fas fa-microchip"></i> Keterampilan Teknis</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <span>Pengembangan web</span>
+                            <div class="progress-bar"><div class="progress-fill" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span>Pengelolaan database</span>
+                            <div class="progress-bar"><div class="progress-fill" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span>Layout dokumen</span>
+                            <div class="progress-bar"><div class="progress-fill" data-width="88%"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span>Desain grafis</span>
+                            <div class="progress-bar"><div class="progress-fill" data-width="82%"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span>Administrasi data</span>
+                            <div class="progress-bar"><div class="progress-fill" data-width="90%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal -->
+                <div class="skill-group glass-card">
+                    <h3><i class="fas fa-users-cog"></i> Keterampilan Personal</h3>
+                    <div class="tags-cloud">
+                        <span class="cloud-tag" data-weight="90">Ketelitian</span>
+                        <span class="cloud-tag" data-weight="95">Komunikasi</span>
+                        <span class="cloud-tag" data-weight="88">Koordinasi</span>
+                        <span class="cloud-tag" data-weight="92">Manajemen waktu</span>
+                        <span class="cloud-tag" data-weight="85">Pemecahan masalah</span>
+                        <span class="cloud-tag" data-weight="94">Adaptasi</span>
+                    </div>
+                </div>
+
+                <!-- Perangkat Kerja -->
+                <div class="skill-group glass-card">
+                    <h3><i class="fas fa-tools"></i> Perangkat Kerja</h3>
+                    <div class="tools-grid">
+                        <span class="tool-item"><i class="fab fa-laravel"></i> Laravel</span>
+                        <span class="tool-item"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="tool-item"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="tool-item"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="tool-item"><i class="fas fa-file-excel"></i> MS Office</span>
+                        <span class="tool-item"><i class="fas fa-paint-brush"></i> Tools Desain</span>
+                        <span class="tool-item"><i class="fas fa-database"></i> DB Tools</span>
+                        <span class="tool-item"><i class="fas fa-tasks"></i> Project Mgmt</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer dengan Quotes -->
+        <footer>
+            <div class="footer-quote">
+                <i class="fas fa-quote-left"></i> "Keberhasilan adalah kepunyaan mereka yang senantiasa berusaha." - BJ Habibie
+            </div>
+            <p><i class="far fa-copyright"></i> 2026 Mutia Rizkianti S.Kom · Cum Laude</p>
+        </footer>
     </div>
-  
-    <!-- SERTIFIKAT tambahan (ringkas) di-capture di pendidikan, namun tampilkan ulang sebagai pengingat -->
-    <hr>
-    <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; justify-content: space-between; align-items: center;" class="fade-section">
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <span class="tag" style="background:#102a41; color:white; border: none;"><i class="fas fa-cloud"></i> OCI Foundation</span>
-            <span class="tag" style="background:#102a41; color:white; border: none;"><i class="fab fa-java"></i> Java Fundamental</span>
-            <span class="tag" style="background:#102a41; color:white; border: none;"><i class="fas fa-database"></i> Database Foundation</span>
-        </div>
-        <div><i class="fas fa-ribbon" style="color:#2b6c9e;"></i> Administrasi Perkantoran (Dsarea 2026)</div>
-    </div>
 
-    <footer class="fade-section">
-        <i class="far fa-copyright"></i> Mutia Rizkianti · CV berbasis web · semua informasi sesuai dokumen asli.
-    </footer>
-</div>
-
-<!-- script.js -->
-<script>
-    (function() {
-        // Animasi scroll fade (intersection observer)
-        const faders = document.querySelectorAll('.fade-section');
-        const appearOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -20px 0px'
-        };
-
-        const appearOnScroll = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // sekali saja
-                }
-            });
-        }, appearOptions);
-
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-        });
-
-        // tambahan sedikit efek micro-interaksi pada card
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transition = 'transform 0.25s ease, box-shadow 0.3s';
-            });
-        });
-
-        // Paksa visible jika sudah muncul di load (untuk bagian atas)
-        window.addEventListener('load', () => {
-            // untuk hero dan yang sudah terlihat
-            faders.forEach(fader => {
-                const rect = fader.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) {
-                    fader.classList.add('visible');
-                    appearOnScroll.unobserve(fader);
-                }
-            });
-        });
-        
-        // tambahan smooth anchor (ga ada link anchor sih, tapi ok)
-    })();
-</script>
-<!-- tidak ada file eksternal, semua inline sesuai permintaan: index.html, style.css, script.js dalam satu file -->
+    <script src="script.js"></script>
 </body>
 </html>
