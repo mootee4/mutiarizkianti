@@ -1,4 +1,5 @@
 // script.js - Animasi Kreatif dan Interaktif - DISESUAIKAN UNTUK FOTO INLINE
+// REVISI: Menghapus semua kode yang berhubungan dengan progress bar
 
 document.addEventListener('DOMContentLoaded', () => {
     // ========== 5 FOTO ROTATING (INLINE VERSION) ==========
@@ -67,12 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 
-                // Trigger progress bars jika ada di section ini
-                const progressBars = entry.target.querySelectorAll('.progress-fill');
-                progressBars.forEach(bar => {
-                    const width = bar.getAttribute('data-width') || '0%';
-                    bar.style.width = width;
-                });
+                // KODE PROGRESS BAR DIHAPUS DARI SINI
                 
                 observer.unobserve(entry.target);
             }
@@ -87,11 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const rect = fader.getBoundingClientRect();
             if (rect.top < window.innerHeight - 100) {
                 fader.classList.add('visible');
-                const progressBars = fader.querySelectorAll('.progress-fill');
-                progressBars.forEach(bar => {
-                    const width = bar.getAttribute('data-width') || '0%';
-                    bar.style.width = width;
-                });
+                
+                // KODE PROGRESS BAR DIHAPUS DARI SINI
+                
                 observer.unobserve(fader);
             }
         });
