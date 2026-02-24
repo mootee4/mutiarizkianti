@@ -24,9 +24,28 @@
         <div class="shape shape-3"></div>
     </div>
 
+    <!-- NAVBAR STICKY -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Mutia Rizkianti</div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i><span>Beranda</span></a></li>
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i><span>Tentang</span></a></li>
+                <li><a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i><span>Pendidikan</span></a></li>
+                <li><a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i><span>Pengalaman</span></a></li>
+                <li><a href="#projects" class="nav-link"><i class="fas fa-flask"></i><span>Proyek</span></a></li>
+                <li><a href="#certificates" class="nav-link"><i class="fas fa-certificate"></i><span>Sertifikat</span></a></li>
+                <li><a href="#skills" class="nav-link"><i class="fas fa-chart-pie"></i><span>Keahlian</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
         <!-- ===== HERO SECTION - FOTO DI SEBELAH NAMA ===== -->
-        <header class="hero fade-section">
+        <header id="home" class="hero fade-section">
             <!-- Bagian Kiri: Nama dan Konten -->
             <div class="hero-content">
                 <div class="badge-container">
@@ -77,7 +96,7 @@
         </header>
 
         <!-- ===== ILLUSTRATED ABOUT SECTION ===== -->
-        <section class="about-section fade-section">
+        <section id="about" class="about-section fade-section">
             <div class="about-illustration">
                 <div class="illustration-grid">
                     <div class="illustration-item code"><i class="fas fa-laptop-code"></i><span>Programming</span></div>
@@ -95,7 +114,7 @@
         </section>
 
         <!-- ===== PENDIDIKAN DENGAN TIMELINE ===== -->
-        <section class="fade-section">
+        <section id="education" class="fade-section">
             <div class="section-title">
                 <i class="fas fa-graduation-cap"></i>
                 <h2>Riwayat Pendidikan</h2>
@@ -117,7 +136,7 @@
         </section>
 
         <!-- ===== PENGALAMAN KERJA DENGAN FLIP CARDS ===== -->
-        <section class="fade-section">
+        <section id="experience" class="fade-section">
             <div class="section-title">
                 <i class="fas fa-briefcase"></i>
                 <h2>Pengalaman Kerja</h2>
@@ -202,7 +221,7 @@
         </section>
 
         <!-- ===== PROYEK DENGAN HOVER EFFECT ===== -->
-        <section class="fade-section">
+        <section id="projects" class="fade-section">
             <div class="section-title">
                 <i class="fas fa-flask"></i>
                 <h2>Proyek Unggulan</h2>
@@ -229,38 +248,83 @@
             </div>
         </section>
 
-        <!-- ===== SERTIFIKAT DENGAN CARD BERJALAN ===== -->
-        <section class="fade-section">
+        <!-- ===== SERTIFIKAT DENGAN CARD BERGAMBAR (POPUP 16:9) ===== -->
+        <section id="certificates" class="fade-section">
             <div class="section-title">
                 <i class="fas fa-certificate"></i>
                 <h2>Sertifikat Kompetensi</h2>
             </div>
-            <div class="certificates-carousel">
-                <div class="cert-card glass-card">
-                    <i class="fab fa-oracle"></i>
-                    <h4>Oracle Cloud Infrastructure Foundation</h4>
-                    <p>Oracle Academy · Jan 2024</p>
+            <div class="certificates-grid">
+                <!-- Kelas.com - Administrasi Perkantoran -->
+                <div class="cert-image-card glass-card" data-src="D:\laragon\www\portofolio\assets\Kelas.com - Kualifikasi Lengkap untuk Administrasi Perkantoran.jpeg">
+                    <div class="cert-image-placeholder">
+                        <i class="fas fa-file-image"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Kualifikasi Administrasi Perkantoran</h4>
+                        <p>Kelas.com · Klik untuk lihat</p>
+                    </div>
                 </div>
-                <div class="cert-card glass-card">
-                    <i class="fab fa-java"></i>
-                    <h4>Java Fundamental & Programming</h4>
-                    <p>Talent Scout Academy · Sep 2023</p>
+
+                <!-- TSA - Java Fundamental -->
+                <div class="cert-image-card glass-card" data-src="D:\laragon\www\portofolio\assets\TSA- Java Fundamental & Java Programming.jpg">
+                    <div class="cert-image-placeholder">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Java Fundamental & Programming</h4>
+                        <p>Talent Scout Academy · Sep 2023</p>
+                    </div>
                 </div>
-                <div class="cert-card glass-card">
-                    <i class="fas fa-database"></i>
-                    <h4>Database Foundation</h4>
-                    <p>Oracle Cloud Academy · Jun 2023</p>
+
+                <!-- TSA - Oracle Cloud Infrastructure -->
+                <div class="cert-image-card glass-card" data-src="D:\laragon\www\portofolio\assets\TSA- Oracle Cloud Infrastructure.jpg">
+                    <div class="cert-image-placeholder">
+                        <i class="fab fa-oracle"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Oracle Cloud Infrastructure</h4>
+                        <p>Talent Scout Academy · Jan 2024</p>
+                    </div>
                 </div>
-                <div class="cert-card glass-card">
-                    <i class="fas fa-file-alt"></i>
-                    <h4>Administrasi Perkantoran</h4>
-                    <p>Dsarea · 2026</p>
+
+                <!-- Magang Riau Pos -->
+                <div class="cert-image-card glass-card" data-src="D:\laragon\www\portofolio\assets\Magang Riau Pos.jpg">
+                    <div class="cert-image-placeholder">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Magang Event Organizer Riau Pos</h4>
+                        <p>Riau Pos · Feb 2025</p>
+                    </div>
+                </div>
+
+                <!-- Oracle Academy Database Foundations -->
+                <div class="cert-image-card glass-card" data-src="D:\laragon\www\portofolio\assets\Oracle Academy Database Foundations.jpg">
+                    <div class="cert-image-placeholder">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Database Foundations</h4>
+                        <p>Oracle Academy · Jun 2023</p>
+                    </div>
+                </div>
+
+                <!-- Sekolah Multimedia -->
+                <div class="cert-image-card glass-card" data-src="D:\laragon\www\portofolio\assets\Sekolah Multimedia 1.jpg">
+                    <div class="cert-image-placeholder">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Sekolah Multimedia</h4>
+                        <p>Program Desain & Kreatif</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== KETERAMPILAN & KOMPETENSI (REVISI) ===== -->
-        <section class="fade-section">
+        <!-- ===== KETERAMPILAN & KOMPETENSI ===== -->
+        <section id="skills" class="fade-section">
             <div class="section-title">
                 <i class="fas fa-chart-pie"></i>
                 <h2>Keterampilan & Kompetensi</h2>
@@ -318,6 +382,21 @@
             </div>
             <p><i class="far fa-copyright"></i> 2026 Mutia Rizkianti</p>
         </footer>
+    </div>
+
+    <!-- POPUP MODAL untuk Sertifikat (16:9) -->
+    <div class="cert-popup" id="certPopup">
+        <div class="popup-overlay" id="popupOverlay"></div>
+        <div class="popup-container">
+            <button class="popup-close" id="popupClose"><i class="fas fa-times"></i></button>
+            <div class="popup-image-wrapper">
+                <img src="" alt="Sertifikat" class="popup-image" id="popupImage">
+                <div class="popup-loading" id="popupLoading">
+                    <i class="fas fa-spinner fa-spin"></i> Memuat gambar...
+                </div>
+            </div>
+            <div class="popup-caption" id="popupCaption"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
